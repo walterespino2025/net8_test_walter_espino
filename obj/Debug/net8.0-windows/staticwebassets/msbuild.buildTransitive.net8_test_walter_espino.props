@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\net8_test_walter_espino.props" />
+</Project>
