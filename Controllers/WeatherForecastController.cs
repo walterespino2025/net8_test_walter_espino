@@ -16,6 +16,8 @@ namespace net8_test_walter_espino.Controllers
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
+
+
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
