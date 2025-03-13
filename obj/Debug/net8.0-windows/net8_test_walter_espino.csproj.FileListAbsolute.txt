@@ -32,3 +32,40 @@ C:\Users\wevst\source\repos\net8_test_walter_espino\net8_test_walter_espino\obj\
 C:\Users\wevst\source\repos\net8_test_walter_espino\net8_test_walter_espino\obj\Debug\net8.0-windows\net8_test_walter_espino.pdb
 C:\Users\wevst\source\repos\net8_test_walter_espino\net8_test_walter_espino\obj\Debug\net8.0-windows\net8_test_walter_espino.genruntimeconfig.cache
 C:\Users\wevst\source\repos\net8_test_walter_espino\net8_test_walter_espino\obj\Debug\net8.0-windows\ref\net8_test_walter_espino.dll
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\appsettings.Development.json
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\appsettings.json
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\net8_test_walter_espino.staticwebassets.endpoints.json
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\net8_test_walter_espino.exe
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\net8_test_walter_espino.deps.json
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\net8_test_walter_espino.runtimeconfig.json
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\net8_test_walter_espino.dll
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\net8_test_walter_espino.pdb
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\MediatR.dll
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\MediatR.Contracts.dll
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\Microsoft.OpenApi.dll
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\Swashbuckle.AspNetCore.Swagger.dll
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\bin\Debug\net8.0-windows\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\net8_test_walter_espino.csproj.AssemblyReference.cache
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\net8_test_walter_espino.GeneratedMSBuildEditorConfig.editorconfig
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\net8_test_walter_espino.AssemblyInfoInputs.cache
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\net8_test_walter_espino.AssemblyInfo.cs
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\net8_test_walter_espino.csproj.CoreCompileInputs.cache
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\net8_test_walter_espino.sourcelink.json
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\scopedcss\bundle\net8_test_walter_espino.styles.css
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\staticwebassets.build.json
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\staticwebassets.development.json
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\staticwebassets.build.endpoints.json
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\staticwebassets\msbuild.net8_test_walter_espino.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\staticwebassets\msbuild.net8_test_walter_espino.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\staticwebassets\msbuild.build.net8_test_walter_espino.props
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\staticwebassets\msbuild.buildMultiTargeting.net8_test_walter_espino.props
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\staticwebassets\msbuild.buildTransitive.net8_test_walter_espino.props
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\staticwebassets.pack.json
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\staticwebassets.upToDateCheck.txt
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\net8_tes.CB394E7D.Up2Date
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\net8_test_walter_espino.dll
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\refint\net8_test_walter_espino.dll
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\net8_test_walter_espino.pdb
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\net8_test_walter_espino.genruntimeconfig.cache
+D:\Wevster\works\Kevin Sanchez\net8_test\net8_test_walter_espino\obj\Debug\net8.0-windows\ref\net8_test_walter_espino.dll
