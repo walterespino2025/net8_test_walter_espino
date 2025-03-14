@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\net8_test_walter_espino.props" />
-</Project>
