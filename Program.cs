@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using net8_test_walter_espino.data;
+using Products.Application;
+using Products.Domain;
+using Products.Infrastructure;
+using Products.Presentation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +17,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ProductsDBContext>(options =>
     options.UseInMemoryDatabase(builder.Configuration.GetConnectionString("ProductsDB"))
 );
+
+builder.Services
+    .AddApplication()
+    .AddInfrastructure()
+    .AddPresentation();
 
 var app = builder.Build();
 
