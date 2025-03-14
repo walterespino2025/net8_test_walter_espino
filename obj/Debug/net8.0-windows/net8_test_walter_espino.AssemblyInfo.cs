@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("net8_test_walter_espino")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e886d53f049498e889a98906fe14e72e4e27950")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+192127d45c1ea08ad7018ce31b77350aca8b07ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("net8_test_walter_espino")]
 [assembly: System.Reflection.AssemblyTitleAttribute("net8_test_walter_espino")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
