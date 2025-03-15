@@ -1,15 +1,20 @@
 ﻿using Products.Domain.Primitives;
 using Products.Domain.ValueObjects;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Products.Domain.Entities;
 
-public sealed class Product_ : Entity
+public class Product
 {
-    public Product_(Guid id, Name name)
-    : base(id)
+    private Product() { }
+    public Product(string Name) 
     {
-        Name = name;
+        Id=Guid.NewGuid();
+        Name = Name;
     }
-    public Name Name { get; set; }
+
+    public Guid Id { get; set; }
+    [NotMapped]
+    public string Name { get; set; }
 }
 

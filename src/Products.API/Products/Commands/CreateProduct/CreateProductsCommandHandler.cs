@@ -25,11 +25,10 @@ internal sealed class CreateProductsCommandHandler : ICommandHandler<CreateProdu
         var nameResult = Name.Create(request.Name);
         
 
-        var member = new Product_(
-            Guid.NewGuid(),
-            nameResult.Value);
+        var _product = new Product(
+            request.Name);
 
-        _productRepository.Add(member);
+        _productRepository.Add(_product);
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 

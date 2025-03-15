@@ -7,29 +7,29 @@ namespace Products.Application.Products.Queries.GetProductById;
 internal sealed class GetProductByIdQueryHandler
     : IQueryHandler<GetProductByIdQuery, ProductResponse>
 {
-    private readonly IProductRepository _memberRepository;
+    private readonly IProductRepository _productRepository;
 
-    public GetProductByIdQueryHandler(IProductRepository memberRepository)
+    public GetProductByIdQueryHandler(IProductRepository productRepository)
     {
-        _memberRepository = memberRepository;
+        _productRepository = productRepository;
     }
 
     public async Task<Result<ProductResponse>> Handle(
         GetProductByIdQuery request,
         CancellationToken cancellationToken)
     {
-        var _product = await _memberRepository.GetByIdAsync(
-            request.ProductID,
+        var _product = await _productRepository.GetByIdAsync(
+            request.id,
             cancellationToken);
 
         if (_product is null)
         {
             return Result.Failure<ProductResponse>(new Error(
-                "Member.NotFound",
-                $"The member with Id {request.ProductID} was not found"));
+                "Product.NotFound",
+                $"The member with Id {request.id} was not found"));
         }
 
-        var response = new ProductResponse(_product.Id, _product.Name.Value);
+        var response = new ProductResponse(_product.Id, _product.Name);
 
         return response;
     }

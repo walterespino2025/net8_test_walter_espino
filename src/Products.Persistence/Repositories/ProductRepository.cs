@@ -1,18 +1,30 @@
-﻿using Products.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Products.Domain.Entities;
 using Products.Domain.Repositories;
+using System.Linq.Expressions;
 
 namespace Products.Persistence.Repository;
 
-internal sealed class MemberRepository : IProductRepository
+internal sealed class ProductRepository : IProductRepository
 {
-    public async Task<Product_?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
+    
+    public async Task<Product?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
     {
         await Task.CompletedTask;
 
         return null;
     }
 
-    public void Add(Product_ member)
+    public async Task<Product?> GetProducts(CancellationToken cancellationToken = default)
+    {
+        await Task.CompletedTask;
+
+        return null;
+
+
+    }
+
+    public void Add(Product product)
     {
     }
 }

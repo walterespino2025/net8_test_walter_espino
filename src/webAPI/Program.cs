@@ -5,6 +5,7 @@ using Products.Infrastructure;
 using Products.Presentation;
 using Products.Persistence;
 using MediatR;
+using Products.Persistence.ProductDBContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +34,8 @@ builder
     .AddControllers()
     .AddApplicationPart(Products.Presentation.AssemblyReference.Assembly);
 
+builder.Services.AddDbContext<ProductsDBContext>(options =>
+    options.UseInMemoryDatabase(builder.Configuration.GetConnectionString("ProductsDB")));
 
 var app = builder.Build();
 
