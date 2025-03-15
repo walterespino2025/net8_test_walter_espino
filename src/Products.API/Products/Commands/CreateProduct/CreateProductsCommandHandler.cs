@@ -5,14 +5,14 @@ using Products.Domain.Shared;
 using Products.Domain.ValueObjects;
 using MediatR;
 
-namespace Products.Application.Members.Commands.CreateMember;
+namespace Products.Application.Products.Commands.CreateProduct;
 
-internal sealed class CreateMemberCommandHandler : ICommandHandler<CreateMemberCommand>
+internal sealed class CreateProductsCommandHandler : ICommandHandler<CreateProductsCommand>
 {
     private readonly IProductRepository _productRepository;
     private readonly IUnitOfWork _unitOfWork;
 
-    public CreateMemberCommandHandler(
+    public CreateProductsCommandHandler(
         IProductRepository productRepository,
         IUnitOfWork unitOfWork)
     {
@@ -20,7 +20,7 @@ internal sealed class CreateMemberCommandHandler : ICommandHandler<CreateMemberC
         _unitOfWork = unitOfWork;
     }
 
-    public async Task<Result> Handle(CreateMemberCommand request, CancellationToken cancellationToken)
+    public async Task<Result> Handle(CreateProductsCommand request, CancellationToken cancellationToken)
     {
         var nameResult = Name.Create(request.Name);
         

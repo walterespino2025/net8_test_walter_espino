@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Products.Domain.Product
+namespace Products.Domain.Entities
 {
     public class ProductsDBContext(DbContextOptions<ProductsDBContext> options) : DbContext(options) 
     {
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Product_> Products { get; set; }
     }
 }

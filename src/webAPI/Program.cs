@@ -1,10 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Products.Application;
-using Products.Domain.Product;
+using Products.Domain.Entities;
 using Products.Infrastructure;
 using Products.Presentation;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+
 
 // Add services to the container.
 
@@ -13,14 +18,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ProductsDBContext>(options =>
-    options.UseInMemoryDatabase(builder.Configuration.GetConnectionString("ProductsDB"))
-);
+builder
+    .Services
+    .Scan(
+        selector => selector
+            .FromAssemblies(
+                Products.Infrastructure.AssemblyReference.Assembly,
+                Products.Persistence.AssemblyReference.Assembly)
+            .AddClasses(false)
+            .AsImplementedInterfaces()
+            .WithScopedLifetime());
 
-builder.Services
-    .AddApplication()
-    .AddInfrastructure()
-    .AddPresentation();
+builder.Services.AddMediatR(Products.Application.AssemblyReference.Assembly);
+
+
 
 var app = builder.Build();
 
