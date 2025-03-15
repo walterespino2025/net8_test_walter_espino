@@ -4,7 +4,7 @@ using Products.Domain.Errors;
 
 namespace Products.Domain.ValueObjects
 {
-    internal class Name : ValueObject
+    public sealed class Name : ValueObject
     {
         public const int MaxLength = 50;
 
