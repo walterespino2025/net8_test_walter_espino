@@ -1,8 +1,8 @@
-﻿using MediatR;
+﻿using System.Reflection;
 
 namespace Products.Application;
 
 public static class AssemblyReference
 {
-    public static readonly IMediator Assembly = typeof(AssemblyReference).Assembly;
+    public static readonly Assembly Assembly = typeof(AssemblyReference).Assembly;
 }

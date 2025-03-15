@@ -3,6 +3,7 @@ using Products.Application;
 using Products.Domain.Entities;
 using Products.Infrastructure;
 using Products.Presentation;
+using Products.Persistence;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
