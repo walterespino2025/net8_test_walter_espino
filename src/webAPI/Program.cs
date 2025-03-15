@@ -5,12 +5,8 @@ using Products.Infrastructure;
 using Products.Presentation;
 using Products.Persistence;
 using MediatR;
-using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
-
 
 // Add services to the container.
 
@@ -30,7 +26,7 @@ builder
             .AsImplementedInterfaces()
             .WithScopedLifetime());
 
-builder.Services.AddMediatR(Products.Application.AssemblyReference.Assembly);
+builder.Services.AddMediatR(cfg=>cfg.RegisterServicesFromAssembly(Products.Application.AssemblyReference.Assembly));
 
 
 
