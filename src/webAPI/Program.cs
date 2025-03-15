@@ -28,6 +28,10 @@ builder
 
 builder.Services.AddMediatR(cfg=>cfg.RegisterServicesFromAssembly(Products.Application.AssemblyReference.Assembly));
 
+builder
+    .Services
+    .AddControllers()
+    .AddApplicationPart(Products.Presentation.AssemblyReference.Assembly);
 
 
 var app = builder.Build();

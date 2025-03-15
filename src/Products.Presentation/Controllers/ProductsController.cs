@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Products.Presentation.Controllers;
 
-[Route("api/members")]
+[ApiController]
+[Route("[controller]")]
 public sealed class ProductsController : ApiController
 {
     public ProductsController(ISender sender)
@@ -16,7 +17,7 @@ public sealed class ProductsController : ApiController
     }
 
     [HttpPost]
-    public async Task<IActionResult> RegisterMember(CancellationToken cancellationToken)
+    public async Task<IActionResult> RegisterProduct(CancellationToken cancellationToken)
     {
         var command = new CreateProductsCommand(
             
@@ -28,7 +29,7 @@ public sealed class ProductsController : ApiController
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetMemberById(Guid id, CancellationToken cancellationToken)
+    public async Task<IActionResult> GetProductById(Guid id, CancellationToken cancellationToken)
     {
         var query = new GetProductByIdQuery(id);
 
