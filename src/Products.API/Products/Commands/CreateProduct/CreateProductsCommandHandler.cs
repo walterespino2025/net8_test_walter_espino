@@ -18,7 +18,7 @@ internal sealed class CreateProductsCommandHandler : IRequestHandler<CreateProdu
 
     public async Task<Guid> Handle(CreateProductsCommand request, CancellationToken cancellationToken)
     {
-        
+
         var _product = new Product(
             request.Name, request.Price, request.Stock);
 

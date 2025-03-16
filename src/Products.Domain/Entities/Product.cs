@@ -20,5 +20,12 @@ public class Product
         Price = price;
         Stock = stock;
     }
+
+    public void Update(string name, double price, int stock)
+    {
+        Name = name;
+        Price = price;
+        Stock = stock;
+    }
 }
 

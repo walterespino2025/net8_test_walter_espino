@@ -58,4 +58,15 @@ public sealed class ProductsController : ApiController
 
         return response != Guid.Empty ? Ok("Record "+ id + " deleted") : NotFound(id);
     }
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateProduct(UpdateProductsCommand command, CancellationToken cancellationToken)
+    {
+
+
+        var result = await Sender.Send(command, cancellationToken);
+
+
+        return result == Guid.Empty ? Ok(result + " " + command) : BadRequest(result == Guid.Empty);
+    }
 }
