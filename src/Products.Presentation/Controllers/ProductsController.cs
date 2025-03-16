@@ -26,7 +26,7 @@ public sealed class ProductsController : ApiController
         var result = await Sender.Send(command, cancellationToken);
 
 
-        return result==Guid.Empty ? Ok(result + " " + command) : BadRequest(result == Guid.Empty);
+        return result!=Guid.Empty ? Ok(result + " " + command) : BadRequest(result == Guid.Empty);
     }
 
     [HttpGet("{id}")]
@@ -67,6 +67,6 @@ public sealed class ProductsController : ApiController
         var result = await Sender.Send(command, cancellationToken);
 
 
-        return result == Guid.Empty ? Ok(result + " " + command) : BadRequest(result == Guid.Empty);
+        return result != Guid.Empty ? Ok(result + " " + command) : BadRequest(result == Guid.Empty);
     }
 }
