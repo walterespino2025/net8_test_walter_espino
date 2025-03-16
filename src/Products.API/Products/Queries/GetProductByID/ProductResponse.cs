@@ -1,2 +1,2 @@
 ﻿namespace Products.Application.Products.Queries.GetProductById;
-public sealed record ProductResponse(Guid Id, string Name);
+public record ProductResponse(Guid Id, string Name, Double Price, int Stock);

@@ -1,38 +1,31 @@
-﻿using Products.Application.Abstractions.Messaging;
+﻿using MediatR;
+using Products.Application.Abstractions.Messaging;
 using Products.Domain.Entities;
 using Products.Domain.Repositories;
 using Products.Domain.Shared;
 using Products.Domain.ValueObjects;
-using MediatR;
+using Products.Persistence.ProductDBContext;
 
 namespace Products.Application.Products.Commands.CreateProduct;
 
-internal sealed class CreateProductsCommandHandler : ICommandHandler<CreateProductsCommand>
+internal sealed class CreateProductsCommandHandler : IRequestHandler<CreateProductsCommand, Guid>
 {
-    private readonly IProductRepository _productRepository;
-    private readonly IUnitOfWork _unitOfWork;
-
-    public CreateProductsCommandHandler(
-        IProductRepository productRepository,
-        IUnitOfWork unitOfWork)
+    private readonly ProductsDBContext _dbContext;
+    public CreateProductsCommandHandler(ProductsDBContext dbContext)
     {
-        _productRepository = productRepository;
-        _unitOfWork = unitOfWork;
+        _dbContext = dbContext;
     }
 
-    public async Task<Result> Handle(CreateProductsCommand request, CancellationToken cancellationToken)
+    public async Task<Guid> Handle(CreateProductsCommand request, CancellationToken cancellationToken)
     {
-        var nameResult = Name.Create(request.Name);
-        
 
-        var member = new Product_(
-            Guid.NewGuid(),
-            nameResult.Value);
+        var _product = new Product(
+            request.Name, request.Price, request.Stock);
 
-        _productRepository.Add(member);
+        _dbContext.Add(_product);
 
-        await _unitOfWork.SaveChangesAsync(cancellationToken);
+        _dbContext.SaveChangesAsync(cancellationToken);
 
-        return Result.Success();
+        return _product.Id;
     }
 }

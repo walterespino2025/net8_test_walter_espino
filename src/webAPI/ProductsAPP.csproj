@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
@@ -16,13 +16,19 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="Scrutor" Version="6.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
   </ItemGroup>
 
   <ItemGroup>
+    
     <ProjectReference Include="..\Products.API\Products.Application.csproj" />
+    
+    <ProjectReference Include="..\Products.Domain\Products.Domain.csproj" />
+    
     <ProjectReference Include="..\Products.Infrastructure\Products.Infrastructure.csproj" />
     <ProjectReference Include="..\Products.Presentation\Products.Presentation.csproj" />
+    <ProjectReference Include="..\Products.Persistence\Products.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

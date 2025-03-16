@@ -1,6 +1,6 @@
 @net8_test_walter_espino_HostAddress = http://localhost:5283
 
-GET {{net8_test_walter_espino_HostAddress}}/weatherforecast/
+GET {{net8_test_walter_espino_HostAddress}}/products/
 Accept: application/json
 
 ###

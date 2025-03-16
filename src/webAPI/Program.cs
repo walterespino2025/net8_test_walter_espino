@@ -3,13 +3,11 @@ using Products.Application;
 using Products.Domain.Entities;
 using Products.Infrastructure;
 using Products.Presentation;
+using Products.Persistence;
 using MediatR;
-using Microsoft.Extensions.DependencyInjection;
+using Products.Persistence.ProductDBContext;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
-
 
 // Add services to the container.
 
@@ -29,9 +27,15 @@ builder
             .AsImplementedInterfaces()
             .WithScopedLifetime());
 
-builder.Services.AddMediatR(Products.Application.AssemblyReference.Assembly);
+builder.Services.AddMediatR(cfg=>cfg.RegisterServicesFromAssembly(Products.Application.AssemblyReference.Assembly));
 
+builder
+    .Services
+    .AddControllers()
+    .AddApplicationPart(Products.Presentation.AssemblyReference.Assembly);
 
+builder.Services.AddDbContext<ProductsDBContext>(options =>
+    options.UseInMemoryDatabase(builder.Configuration.GetConnectionString("ProductsDB")));
 
 var app = builder.Build();
 
