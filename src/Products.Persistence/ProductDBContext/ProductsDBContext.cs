@@ -22,9 +22,9 @@ namespace Products.Persistence.ProductDBContext
 
             modelBuilder.Entity<Product>().HasKey(p => p.Id);
             modelBuilder.Entity<Product>().HasData(
-                new Product("Walter"),
-                new Product("Ale"),
-                new Product("Lucy")
+                new Product("Pen",5.5,5),
+                new Product("Car",12.500,1),
+                new Product("Nintendo Switch",200.2,4)
             );
         }
 

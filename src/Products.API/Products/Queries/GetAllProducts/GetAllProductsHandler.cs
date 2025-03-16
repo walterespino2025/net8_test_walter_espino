@@ -20,7 +20,9 @@ internal sealed class GetAllProductsHandler : IRequestHandler<GetAllProductsQuer
             .Products
             .Select(p => new AllProductResponse(
                 p.Id,
-                p.Name
+                p.Name,
+                p.Price,
+                p.Stock
                 )).ToListAsync();
 
 

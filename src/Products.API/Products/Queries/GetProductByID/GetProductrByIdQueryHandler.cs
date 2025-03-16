@@ -1,36 +1,38 @@
-﻿using Products.Application.Abstractions.Messaging;
+﻿using MediatR;
+using Products.Application.Abstractions.Messaging;
 using Products.Domain.Repositories;
 using Products.Domain.Shared;
+using Products.Persistence.ProductDBContext;
+using System.Linq;
 
 namespace Products.Application.Products.Queries.GetProductById;
 
-internal sealed class GetProductByIdQueryHandler
-    : IQueryHandler<GetProductByIdQuery, ProductResponse>
+internal sealed class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, ProductResponse?>
 {
-    private readonly IProductRepository _productRepository;
-
-    public GetProductByIdQueryHandler(IProductRepository productRepository)
+    private readonly ProductsDBContext _dbContext;
+    public GetProductByIdQueryHandler(ProductsDBContext dbContext)
     {
-        _productRepository = productRepository;
+        _dbContext = dbContext;
     }
 
-    public async Task<Result<ProductResponse>> Handle(
-        GetProductByIdQuery request,
-        CancellationToken cancellationToken)
+    public async Task<ProductResponse?> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
     {
-        var _product = await _productRepository.GetByIdAsync(
-            request.id,
-            cancellationToken);
+
+        var _product = _dbContext.Products.Where(x => x.Id.Equals(request.Id)).
+            Select(p => new ProductResponse(
+                p.Id,
+                p.Name,
+                p.Price,
+                p.Stock
+                ))
+            .FirstOrDefault();
 
         if (_product is null)
         {
-            return Result.Failure<ProductResponse>(new Error(
-                "Product.NotFound",
-                $"The member with Id {request.id} was not found"));
+            return null;
         }
 
-        var response = new ProductResponse(_product.Id, _product.Name);
+        return new ProductResponse(_product.Id, _product.Name, _product.Price, _product.Stock);
 
-        return response;
     }
 }
